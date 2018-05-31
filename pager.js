@@ -10,7 +10,7 @@
     function injector(t, splitter) {
         var text = t.textContent,
             a = text.split(splitter),
-            a,
+            a ,
             after,
             inject = '';
         if (splitter === 'char') {
