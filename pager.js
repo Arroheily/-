@@ -1,7 +1,7 @@
 (function() {
     var _options = {
         default_word: "default hello"
-    }
+    },
 
     var _plugin_api = {
         firstFunc: function(str = _options.default_word) {
