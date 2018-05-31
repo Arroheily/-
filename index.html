@@ -2,17 +2,40 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-       <script src="pager.js"></script> 
-        <title>Document</title>
+        <script src="pager.js"></script>
+        <title>ColorDivide.JS</title>
+        <style>
+        * {margin:0; padding:0;}
+        body {background: #CCC;}
+        ::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
+        ::selection { background:#FF5E99; color:#fff; text-shadow: none; }
+        .wrapper {
+        width: 710px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        background: #FFFFFF;
+        padding: 50px;
+        }
+        .code {
+        background: #f8f8f8;
+        border: 1px solid #ccc;
+        margin-bottom: 2em;
+        padding: 10px;
+        }
+        </style>
     </head>
-    <body>        
-        <div id="abs"></div>
-        <div id="abs2"></div>
+    <body>
+        <div class="wrapper">
+            <h4>Result</h4>
+            <div class="code">
+                <h1 id="demo1">ColorDivide</h1>
+            </div>
+        </div>
     </body>
 </html>
 <script>
-    pager.listen('#abs2')    
-    pager.config({color : "#888888"}).listen('#abs')
-    // Pager.generatePagerHtml('abs',40);
-    // Pager.generatePagerHtml('abs2',16);
+ColorDivide.listen('#demo1');
+// ColorDivide.config({splitter: 'word'}).listen('#demo2');
+// ColorDivide.config({splitter: 'line'}).listen('#demo3');
 </script>
