@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <script src="index.js"></script>
+       <script src="pager.js"></script> 
         <title>Document</title>
     </head>
     <body>        
@@ -10,8 +10,9 @@
         <div id="abs2"></div>
     </body>
 </html>
-<script type="text/javascript">
-    Pager.config({}).listen('#abs')
+<script>
+    pager.listen('#abs2')    
+    pager.config({color : "#888888"}).listen('#abs')
     // Pager.generatePagerHtml('abs',40);
     // Pager.generatePagerHtml('abs2',16);
 </script>
