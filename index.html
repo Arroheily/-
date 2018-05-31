@@ -4,38 +4,33 @@
         <meta charset="UTF-8">
         <script src="pager.js"></script>
         <title>ColorDivide.JS</title>
-        <style>
-        * {margin:0; padding:0;}
-        body {background: #CCC;}
-        ::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
-        ::selection { background:#FF5E99; color:#fff; text-shadow: none; }
-        .wrapper {
-        width: 710px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-        background: #FFFFFF;
-        padding: 50px;
-        }
-        .code {
-        background: #f8f8f8;
-        border: 1px solid #ccc;
-        margin-bottom: 2em;
-        padding: 10px;
-        }
-        </style>
     </head>
     <body>
-        <div class="wrapper">
-            <h4>Result</h4>
-            <div class="code">
-                <h1 id="demo1">ColorDivide</h1>
+        <!--         <ul id="tab_nav">
+            <li class="current">新闻</li>
+            <li>生活</li>
+            <li>体育</li>
+            <li>抽奖</li>
+        </ul>
+        <div id="tabs">
+            <div class="tab_items">
+                新闻
             </div>
-        </div>
+            <div class="tab_items off">
+                生活
+            </div>
+            <div class="tab_items off">
+                体育
+            </div>
+            <div class="tab_items off">
+                抽奖
+            </div>
+        </div> -->
     </body>
 </html>
 <script>
-ColorDivide.listen('#demo1');
+CJPlugin.secondFunc("hello");
+// ColorDivide.listen('#demo1');
 // ColorDivide.config({splitter: 'word'}).listen('#demo2');
 // ColorDivide.config({splitter: 'line'}).listen('#demo3');
 </script>

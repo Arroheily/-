@@ -1,54 +1,19 @@
 (function() {
-    var options = {
-        splitter: 'char'
-    }
-    //helper
-    var getRandomColor = function() {
-        return 'hsla(' + (Math.random() * 360) + ', 100%, 50%, 1)';
+    var _options = {
+        default_word: "default hello"
     }
 
-    function injector(t, splitter) {
-        var text = t.textContent,
-            a = text.split(splitter),
-            a ,
-            after,
-            inject = '';
-        if (splitter === 'char') {
-            a = text.split('');
-            after = '';
-        }
-
-        if (a.length) {
-            for (var i = 0; i < a.length; i++) {
-                var font_color = getRandomColor();
-                inject += '<span style="color:' + font_color + '">' + a[i] + '</span>' + after;
-            }
-            t.innerHTML = inject;
-        }
-    }
-    //API
-    var api = {
-        config: function(opts) {
-            if (!opts) return options;
-            for (var key in opts) {
-                options[key] = opts[key];
-            }
+    var _plugin_api = {
+        firstFunc: function(str = _options.default_word) {
+            alert(str);
             return this;
         },
-
-        listen: function listen(elem) {
-            if (typeof elem === 'string') {
-                var elems = document.querySelectorAll(elem),
-                    i = elems.length;
-                while (i--) {
-                    listen(elems[i]);
-                }
-                return
-            }
-            injector(elem, options.splitter);
-
+        secondFunc: function() {
+            alert("secondFunc");
             return this;
         }
     }
-    this.ColorDivide = api;
+
+    this.CJPlugin = _plugin_api;
+
 })();
