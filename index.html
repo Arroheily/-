@@ -5,12 +5,32 @@
         <script src="pager.js"></script>
         <title>ColorDivide.JS</title>
     </head>
+    <style>
+        .abs-pager-btn{
+            display: inline-block;
+            padding-right: 5px;
+            font-size: 14px;
+            font-weight: normal;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+        }
+        .abs-pager-active{
+            color: #ffc446;
+            cursor: pointer;
+        }
+        .margin-top{
+            margin-top: 60px;
+        }
+    </style>
     <body>
-        <div id="pager_demo"></div>
+        <div id="pager_demo1"></div>
+        <div id="pager_demo2" class="margin-top"></div>
     </body>
 </html>
 <script>
-PGPlugin.generatePage("pager_demo");
+PGPlugin.generatePage("pager_demo1",18);
+PGPlugin.generatePage("pager_demo2",9);
 // ColorDivide.listen('#demo1');
 // ColorDivide.config({splitter: 'word'}).listen('#demo2');
 // ColorDivide.config({splitter: 'line'}).listen('#demo3');
